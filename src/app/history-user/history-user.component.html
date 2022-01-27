@@ -7,11 +7,13 @@
             <h4 *ngIf="userHistory.length > 0">Past Searches </h4>
            
             <div *ngIf="userHistory.length > 0">
+                    <div class="panel-body table-responsive">
                      <ul *ngFor="let arr of userHistory">
                          <li >
                                 <a class="navbar-brand" target="_blank" href="https://github.com/{{arr}}">{{arr}}</a>
                          </li>
-                    </ul>  
+                    </ul> 
+                    </div> 
             </div>
             </div>
             <div class="col-md-4"> <button  *ngIf="userHistory.length > 0" type="button"  class="btn btn-success" (click)="ClearHistory()">Clear history</button> </div>
